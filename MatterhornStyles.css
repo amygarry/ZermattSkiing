@@ -1,9 +1,10 @@
 body{
     margin:0%;
+    
 }
 h1 { 
-    height: auto;
-    width: 100vw;
+    height: 400px;
+    width: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;
@@ -13,10 +14,15 @@ h1 {
     text-align:center;
     margin-top: 0%;
     margin-bottom: 0%;
+   
+    /* background-color: #1b5493; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
     
 }
 .backdrop {
-    background-color:#9ebbcd52;
+    background-color:#1b5493;
    height: 40vh;
    display: flex;
 
@@ -26,24 +32,29 @@ h1 {
 .description {
 display: flex;
 text-align: center;
+/* height: 150px; */
+align-items: center; 
 justify-content: center;
-border: solid #86868e 2px;
+justify-items: center;
+/* border: solid #86868e 2px;
 border-radius: 3px;
-box-shadow:5px 5px 3px #c9cace;
-margin-left:  20%;
-margin-right: 20%;
+box-shadow:5px 5px 3px #c9cace; */
+margin-left: 10%;
+margin-right: 10%;
 padding: 1.5%;
-font-family:Bookman, URW Bookman L, serif;
-font-size: x-large ;
-background-color:#FAFBFC;
-margin-top: 5%;
-margin-bottom: 5%;
+font-family: 'Poiret One', cursive;
+font-size: xx-large;
+font-weight: light 300;
+color: white;
+background-color:#1b5493;
+/* margin-top: 5%;
+margin-bottom: 5%; */
 
 }
 
 .backdropI{
-    background-color:#54a4d652;
-    height: 40vh;
+    background-color: #FAFBFC;
+    height: 350px;
     display: flex;
 }
 
@@ -58,7 +69,7 @@ margin-bottom: 3%;
 }
 #week {
     background-color: #FAFBFC;
-    box-shadow:5px 5px 3px #65666a;
+    /* box-shadow:5px 5px 3px #65666a; */
 
 }
 .AproxCostBackground{
@@ -91,19 +102,36 @@ table {
     table-layout: fixed;
     width: 100%;
     border-collapse: collapse;
-    border: 3px solid rgb(3, 3, 3);
+    border: 1px solid rgb(90, 90, 92);
+    border: none;
   }
  
   th, td {
   padding: 10px;
-  border: 2px solid rgb(0, 0, 0);
-}
+  /* text-align: left; */
 
+
+}
+th {
+    /* text-decoration: underline; */
+    font-family: 'Cinzel', serif;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bolder;
+    color: #65666a;
+    font-weight: lighter;
+    
+}
+td {
+    border-right:1px solid rgb(80, 78, 78);
+     /* text-align: left; */
+}
 * {
     background-color:;
 }
-
-.squad {
+.noboarder{
+    border-right: none;
+}
+#squad {
 
     text-align: left;
     margin-left:  7%;
@@ -154,6 +182,24 @@ h2 {
 }
 
 .info {
+    display:flex;
+    justify-content: center;
+    justify-items: center;
     text-align: left;
-    margin-left: 20%;
+    /* margin-left: 20%; */
 }
+input{
+    height: 30px;
+    width: 300px;
+    background-color: #c5c5c8;
+    margin: 10px;
+}
+textarea {
+    background-color: #c5c5c8;
+   
+}
+@media (max-width: 480px) {
+    .text {
+      font-size: 16px;
+    }
+  }

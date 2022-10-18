@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="MatterhornStyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
     <title>Ski Matterhorn</title>
 </head>
 <body>
@@ -40,7 +43,7 @@
                    <td>January 30th</td>
                    <td>January 31st</td>
                    <td>Febuary 1st</td>
-                   <td>Febuary 2nd</td>
+                   <td class="noboarder">Febuary 2nd</td>
                 
                 </tr>
 
@@ -53,7 +56,7 @@
                     <td>Ski The Matterhorn</td>
                     <td>Ski The Matterhorn</td>
                     <td>Ski The Matterhorn</td>
-                    <td> Fly home</td>
+                    <td class ="noboarder"> Fly home</td>
                 </tr>
             </tbody>
         </table>
@@ -68,51 +71,47 @@
             <table>
                 <thead>
                      <tr>
-                        <th>Thing</th>
-                        <th>Cost</th>
+                        <!-- <th>Thing</th>
+                        <th>Cost</th> -->
                     </tr>
                  </thead>
                 <tbody>
                     <tr>
                         <td>Flight</td>
-                        <td>$650</td>
+                        <td class ="noboarder">$650</td>
                     </tr>
                     <tr>
                         <td>Airbnb</td>
-                        <td>$560</td>
+                        <td class ="noboarder">$560</td>
                     </tr>
                     <tr>
                         <td>Food</td>
-                        <td>$210</td>
+                        <td class ="noboarder">$210</td>
                     </tr>
                     <tr>
                         <td>Transportation</td>
-                        <td>$100</td>
+                        <td class ="noboarder">$100</td>
                     </tr>
                     <tr>
                         <td>Ski Pass</td>
-                        <td>Free with Ikon</td>
+                        <td class ="noboarder">Free with Ikon</td>
                     </tr>
                     <tr>
                         <td>Total</td>
-                        <td>$1520</td>
+                        <td class ="noboarder">$1520</td>
                     </tr>
                     </thead>
                 </tbody>
             </table>
         </p>
     </div>
+
+
 </div>
-    <div class="squad">
-        <h2>The Ski Squad</h2>
-        <p class="queen"><img class="fit-picture" src="Skipic.JPG" alt="">
-          <h4>Queen of Diamons: Amy</h4>
-                <p>Always looking for more technical terrain Amy loves to shred the blacks. She has dreamt of skiing the Swiss Alps for as long as she can remember. </p>
-        </p> 
-        <p><img class= "fit-picture" src="IMG_3269.jpeg" alt="">
-            <h4>Bad Bunny Austin</h4> 
-            <p>Rips down anything and everything. If you put kicker or stump or cliff drop in front of him he'll send it. Is down to shred all day then hit the pubs at night. </p>
-        </p>
+
+
+    <div id="squad">
+        <h2><button id = "theSquad">The Ski Squad</button></h2>
     </div>
 <div class="formbackground">
     
@@ -138,5 +137,7 @@
     <button>Submit</button>
 </form>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="Zermatt.js"></script>
 </body>
 </html>
