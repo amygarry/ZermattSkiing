@@ -168,7 +168,7 @@ h2 {
 .formbackground{
     display: flex;
     align-items: center;
-    background-image: url(IMG_2596.JPG);
+    background-image: url("/spic");
     height: 100vh;
     background-attachment:fixed;
     /* position: sticky; */

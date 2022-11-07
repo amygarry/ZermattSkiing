@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="MatterhornStyles.css">
+    <link rel="stylesheet" href="/styles">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
@@ -115,29 +115,43 @@
     </div>
 <div class="formbackground">
     
-    <form>
+    <form type="submit" id="jointhesquad">
         <h2>Join the Squad</h2>
     <div class="info">
         <label for="name">Name</label>
-        <input type="text" name="name" placeholder="type name here">
+        <input id="name" type="text" name="name" placeholder="type name here">
     </div>
     <div class="info">
         <label for="ig">Instagram</label>
-        <input type="text" name="ig" placeholder="@username">
+        <input id="username" type="text" name="ig" placeholder="@username">
     </div>
     <div class="info">
-        <label for="bio">Bio</label>
-        <textarea name="bio" placeholder="tell us about yourself" cols="40" rows="4"></textarea>
+        <label for="callname">Call Name</label>
+        <input id="callname" type="text" name="callname" placeholder="how do people know you on the slopes? e.g. Queen of Diamons">
+    </div>
+    <div class="info">
+        <label for="age">Age</label>
+        <input id="age" type="number" step=".1" name="age" placeholder="rounded to the nearest tenth">
+    </div>
+    <div class="info">
+        <label for="allegiance">choose your character</label>
+        <div id="radiobutton">
+        <input type="radio" name="allegiance" id="skier"> 
+        <label for="skier">Skier</label> <br>
+        <input type="radio" name="allegiance" id="snowboarder"> <br>
+        <label for="snowboarder">Snowboarder</label>
+        </div>
     </div>
     <div class="info">
         <label for="enhance">How will you enhance the trip</label>
-        <textarea name="bio" placeholder="tell us how cool your are" cols="30" rows="10">
+        <textarea id="enhance" name="enhance" placeholder="tell us how cool your are" cols="30" rows="10">
         </textarea>
     </div>
-    <button>Submit</button>
+    <button type="submit">Submit</button>
 </form>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="Zermatt.js"></script>
+
+<script src="/js"></script>
 </body>
 </html>

@@ -1,5 +1,12 @@
 const squadBtn = document.querySelector('#theSquad')
 const squadDiv = document.querySelector('#squad')
+const joinSquadfrm = document.getElementById('jointhesquad')
+const nameInput = document.getElementById('name')
+const instagram = document.getElementById('username')
+const radiobutton = document.getElementById('radiobutton')
+const enhance = document.getElementById('enhance')
+const callname = document.getElementById('callname')
+const age = document.getElementById('age')
 
 
 function showSquad (){
@@ -26,5 +33,20 @@ function createMember (skiers){
         squadDiv.appendChild(skiCard) 
     }
 
+    function addSkier(e){
+        e.preventDefault()
+        console.log('buttonworks')
+        const body = {
+            name: nameInput.value,
+            instagram: instagram.value,
+            callname: callname.value,
+            type: radiobutton.value,
+            enhancement: enhance.value,
+            age: age.value
+        }
+        console.log(body)
+        axios.post("/addskier", body)
+    }
 
+joinSquadfrm.addEventListener('submit', addSkier)
 squadBtn.addEventListener('click', showSquad)
