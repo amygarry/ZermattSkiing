@@ -7,6 +7,11 @@ const radiobutton = document.getElementById('radiobutton')
 const enhance = document.getElementById('enhance')
 const callname = document.getElementById('callname')
 const age = document.getElementById('age')
+const pin = document.getElementById('pin')
+const skier = document.getElementById('skier')
+const snowboarder = document.getElementById('snowboarder')
+
+
 
 
 function showSquad (){
@@ -36,16 +41,27 @@ function createMember (skiers){
     function addSkier(e){
         e.preventDefault()
         console.log('buttonworks')
+        type =""
+        if (skier.checked){
+            type = "skier"
+        }else if(snowboarder.checked){
+            type = "snowboarder"
+        }
         const body = {
             name: nameInput.value,
             instagram: instagram.value,
             callname: callname.value,
-            type: radiobutton.value,
+            type: type,
             enhancement: enhance.value,
-            age: age.value
+            age: age.value,
+            pin:pin.value
         }
         console.log(body)
         axios.post("/addskier", body)
+        .then(res =>{
+            alert(res.data)
+        })
+        
     }
 
 joinSquadfrm.addEventListener('submit', addSkier)

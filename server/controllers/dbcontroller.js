@@ -19,13 +19,15 @@ const sequelize = new Sequelize(DATABASE_URL, {
 
 module.exports = {
     createSquadMember: (req, res)=>{
-        let {name, instagram, callname, type, enhancement, age} = req.body
+        let {name, instagram, callname, type, enhancement, age, pin} = req.body
         console.log("got to line 23")
         sequelize.query(`
-        INSERT INTO skisquad (name, instagram, callname, age, enhancement)
-        VALUES ('${name}', '${instagram}', '${callname}', ${age},'${enhancement}')
+        INSERT INTO skisquad (name, instagram, callname, type, age, enhancement, pin)
+        VALUES ('${name}', '${instagram}', '${callname}', '${type}',${age},'${enhancement}', ${pin})
         `)
-        .then(res.send("hello"))
+        .then(dbres=>{
+            res.send(`${name} was added to the squad`)
+        })
     }
 }
 

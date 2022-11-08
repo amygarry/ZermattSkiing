@@ -134,11 +134,11 @@
         <input id="age" type="number" step=".1" name="age" placeholder="rounded to the nearest tenth">
     </div>
     <div class="info">
-        <label for="allegiance">choose your character</label>
+        <label for="allegiance">Ride Type</label>
         <div id="radiobutton">
-        <input type="radio" name="allegiance" id="skier"> 
+        <input type="radio" name="allegiance" id="skier" value="skier"> 
         <label for="skier">Skier</label> <br>
-        <input type="radio" name="allegiance" id="snowboarder"> <br>
+        <input type="radio" name="allegiance" id="snowboarder" value="snowboarder"> <br>
         <label for="snowboarder">Snowboarder</label>
         </div>
     </div>
@@ -146,6 +146,11 @@
         <label for="enhance">How will you enhance the trip</label>
         <textarea id="enhance" name="enhance" placeholder="tell us how cool your are" cols="30" rows="10">
         </textarea>
+    </div>
+    <div class="info">
+        <label for="pin">Pin</label>
+        <input id="pin" type="number" name="pin" placeholder="****">
+        <p>So you can edit your information</p>
     </div>
     <button type="submit">Submit</button>
 </form>
