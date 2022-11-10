@@ -78,7 +78,7 @@
                 <tbody>
                     <tr>
                         <td>Flight</td>
-                        <td class ="noboarder">$650</td>
+                        <td class ="noboarder"><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhooagwIAhIIL20vMGYycjYSCjIwMjMtMDEtMjVyDAgDEggvbS8wODk2NhooagwIAxIIL20vMDg5NjYSCjIwMjMtMDItMDJyDAgCEggvbS8wZjJyNnABggELCP___________wFAAUgBmAEB" target="_blank">$650</a></td>
                     </tr>
                     <tr>
                         <td>Airbnb</td>
@@ -94,7 +94,7 @@
                     </tr>
                     <tr>
                         <td>Ski Pass</td>
-                        <td class ="noboarder">Free with Ikon</td>
+                        <td class ="noboarder"> <a href="https://www.ikonpass.com/" target="_blank">Free with Ikon</a> </td>
                     </tr>
                     <tr>
                         <td>Total</td>
@@ -107,11 +107,35 @@
     </div>
 
 
+<div>
+
+<img src="/weatherman" alt="picture of steve garry the weatherman" width="400" 
+height="500" >
+<h2>Weather in Zurich</h2>
+<table id="week">
+    <thead>
+        <tr>
+            <th>date (pulled from json)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr id="dates">
+           <td>weather in F from json</td>
+           <td class="noboarder">Febuary 2nd</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+
+
 </div>
 
 
     <div id="squad">
         <h2><button id = "theSquad">The Ski Squad</button></h2>
+        <h2><button id = "squadStats">Squad Stats</button></h2>
     </div>
 <div class="formbackground">
     
@@ -141,6 +165,17 @@
         <input type="radio" name="allegiance" id="snowboarder" value="snowboarder"> <br>
         <label for="snowboarder">Snowboarder</label>
         </div>
+        <br>
+        <div class="info">
+            <label for="ability">Ski Level</label>
+            <div id="radiobutton">
+            <input type="radio" name="abilitiy" id="expert"> 
+            <label for="expert">Expert</label> <br>
+            <input type="radio" name="ability" id="intermediate"> <br>
+            <label for="intermediate">Intermediate</label>
+            <input type="radio" name="ability" id="beginner"> <br>
+            <label for="beginner">Beginner</label>
+            </div>
     </div>
     <div class="info">
         <label for="enhance">How will you enhance the trip</label>

@@ -1,0 +1,13 @@
+https://api.meteomatics.com/2022-11-08T00:00:00.000Z--2022-11-15T00:00:00.000Z:PT12H/t_2m:F/46.0212076,7.749254/json
+
+weather api link that I want to use 
+
+SELECT AVG(age) AS AverageAge FROM skisquad; 
+use to get average age 
+
+
+SELECT type, count(*)
+from skisquad 
+group by type; 
+
+used to get the number of snowboarders and skiers 

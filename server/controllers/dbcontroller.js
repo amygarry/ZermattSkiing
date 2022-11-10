@@ -19,16 +19,44 @@ const sequelize = new Sequelize(DATABASE_URL, {
 
 module.exports = {
     createSquadMember: (req, res)=>{
-        let {name, instagram, callname, type, enhancement, age, pin} = req.body
-        console.log("got to line 23")
+        let {name, instagram, callname, type, enhancement, age, pin, ability} = req.body
         sequelize.query(`
-        INSERT INTO skisquad (name, instagram, callname, type, age, enhancement, pin)
-        VALUES ('${name}', '${instagram}', '${callname}', '${type}',${age},'${enhancement}', ${pin})
+        INSERT INTO skisquad (name, instagram, callname, type, age, enhancement, pin, ability)
+        VALUES ('${name}', '${instagram}', '${callname}', '${type}',${age},'${enhancement}', ${pin}, '${ability}')
         `)
         .then(dbres=>{
             res.send(`${name} was added to the squad`)
         })
+    },
+
+    getSquad: (req,res)=>{
+        sequelize.query(`
+        SELECT * FROM skisquad
+        `)
+        .then(dbres=>{
+            res.send(dbres[0])
+        })
+    },
+
+    getAvgAge: (req,res)=>{
+       
+        sequelize.query(`
+        SELECT AVG(age) AS AverageAge FROM skisquad;
+        
+        SELECT type, count(*)
+        from skisquad 
+        group by type; 
+
+        SELECT ability, count(*)
+        from skisquad 
+        group by ability; 
+        
+        `)
+        .then(dbres=>{
+            res.send(dbres[0])
+        })
     }
+
 }
 
 

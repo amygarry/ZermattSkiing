@@ -13,6 +13,11 @@ module.exports = {
     squadpic: (req, res) => {
         res.sendFile(path.join(__dirname, "../../IMG_2596.JPG"))
     },
+
+    weathermanpic:  (req, res) => {
+        res.sendFile(path.join(__dirname, "../../weatherman.JPG"))
+    },
+
     scriptServer : (req,res)=>{
         res.sendFile(path.join(__dirname,"../../Zermatt.js" ))
     }
