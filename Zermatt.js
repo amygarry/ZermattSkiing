@@ -43,17 +43,14 @@ function createMemberCard (skiers){
     function SquadStats (){
         axios.get('http://localhost:6721/ski/stats')
         .then(res=>{
-            console.log(res.data)
+            let squadStatsCard = document.createElement('div')
+            squadStatsCard.innerHTML = `
+            <p>Average Age ${res.data[0].averageage}</p>
+            <p>Number of skiers ${res.data[2].count}</p>
+            <p>Number of snowboarders ${res.data[3].count}</p>
+            `
+            squadDiv.appendChild(squadStatsCard) 
         })
-        
-        // let squadStatCard = document.createElement('div')
-        // squadStatsCard.innerHTML = `<h4>${skiers.callname}</h4>
-        //   <ul>
-        //      <li>Name: ${skiers.name}</li>
-        //      <li>Age: ${skiers.age}</li>
-        //      <li>instagram: ${skiers.instagram}</li>
-        //      </ul>`
-        //      squadDiv.appendChild(skiCard) 
     }
 
     function addSkier(e){
