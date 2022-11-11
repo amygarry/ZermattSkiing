@@ -28,6 +28,8 @@ app.post("/addskier", createSquadMember)
 app.get('/ski/inventory', getSquad)
 app.get('/ski/stats', getAvgAge)
 
+
+
 const {PORT} = process.env
 
 app.listen(PORT,()=>{

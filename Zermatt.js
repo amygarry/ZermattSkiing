@@ -14,7 +14,11 @@ const expert = document.getElementById('expert')
 const intermediate =document.getElementById('intermediate')
 const beginner = document.getElementById('beginner')
 const squadStatsbtn = document.getElementById('squadStats')
-
+const weathertestBtn = document.getElementById('weather')
+const weatherDiv = document.getElementById('weatherdiv')
+const weatherTable = document.getElementById('weatherWeek')
+const weatherdates = document.getElementById('tr')
+const temp = document.getElementById('temp')
 
 function showSquad (){
 axios
@@ -88,9 +92,65 @@ function createMemberCard (skiers){
         
     }
 
+    function weather (){
+        console.log('got to weatherfunction')
+//this next part gets the token 
+        username='devmountain_garry'
+        password='2z9uWnaT8F'
+        let headers = new Headers();
+        headers.set('Authorization', 'Basic ' + btoa(username + ":" + password));
+
+
+        fetch('https://login.meteomatics.com/api/v1/token', {
+            method: 'GET', headers: headers
+        }).then(function (resp) {
+             return resp.json();
+        }).then(function (data) {
+            let token = data.access_token;
+            console.log('token', token);
+            getapiData(token)
+        }).catch(function (err) {
+            console.log('something went wrong', err);
+        });
+     
+        function getapiData (token){
+            let today = new Date().toISOString()
+            const nextWeek = new Date()
+            nextWeek.setDate(new Date().getDate() + 7)
+            let nextWeekSring = nextWeek.toISOString()
+            console.log(nextWeekSring)
+            console.log(today)
+            
+            let url = today +"--" + nextWeekSring + ":PT12H/t_2m:F/46.0212076,7.749254/json?access_token=" + token
+    
+            axios.get('https://api.meteomatics.com/'+url)
+            .then(res =>{
+                console.log(res.data.data[0].coordinates[0].dates[0].date.substring(5,10))
+                
+                for (let i = 0; i < res.data.data[0].coordinates[0].dates.length; i++) {
+                    let weatherdate = document.createElement('th')
+                    weatherdate.innerHTML= `${res.data.data[0].coordinates[0].dates[i].date.substring(5,10)}`
+                    let tempurature = document.createElement('td')
+                    tempurature.innerHTML= `${res.data.data[0].coordinates[0].dates[i].value}`
+                    weatherdates.appendChild(weatherdate)
+                    temp.appendChild(tempurature)
+                }
+            })
+        }
+ 
+
+    }
+
+
+
 joinSquadfrm.addEventListener('submit', addSkier)
 squadBtn.addEventListener('click', showSquad)
 squadStatsbtn.addEventListener('click',SquadStats)
+weathertestBtn.addEventListener('click', weather)
 
 // <li>Ability Level:${skiers.abilityLevel}</li>
 //<li>${skiers.bio}</li>
+
+
+
+
