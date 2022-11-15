@@ -35,14 +35,17 @@ axios
 function createMemberCard (skiers){
     
    let skiCard = document.createElement('div')
-   skiCard.innerHTML = `<h4>${skiers.callname}</h4>
-     <ul>
-        <li>Name: ${skiers.name}</li>
-        <li>Age: ${skiers.age}</li>
-        <li>Instagram: ${skiers.instagram}</li>
-        <li>Mode: ${skiers.type}</li>
-        <li> Ability Leve:${skiers.ability}</li>
-        </ul>`
+   skiCard.innerHTML = `
+    <div class="infofrombtn">
+        <h4 id ="callname">${skiers.callname}</h4>
+            <ul class ="skier-info">
+                <li>Name: ${skiers.name}</li>
+                <li>Age: ${skiers.age}</li>
+                <li>Instagram: ${skiers.instagram}</li>
+                <li>Mode: ${skiers.type}</li>
+                <li> Ability Leve:${skiers.ability}</li>
+            </ul>
+    </div>`
         squadDiv.appendChild(skiCard) 
     }
 

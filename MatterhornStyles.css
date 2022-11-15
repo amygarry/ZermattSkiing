@@ -35,23 +35,30 @@ h1 {
 
 #navbar {
     background-color: rgba(15, 54, 114, 1);
-    height: 70px;
+    height: 140px;
     color: white;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0px;
+    flex-direction: row;
 }
-
-.nav{
+.nav-wrapper{
     display: flex;
-    justify-content: center;
+}
+.nav{
     margin: 2%;
     color: white;
-    font-size: 2vw ; 
+    font-size:xx-large; 
     font-family: 'Cormorant Garamond', serif;
-    font-weight: 700;
+    transform: .5s;
+    text-align: center;
+    width: 250px;
+}
+#faq{
+    width: auto;
+    margin-right: 8%;
 }
 
 
@@ -92,6 +99,7 @@ h1 {
     background-color: #FAFBFC;
     display: flex;
     height: fit-content;
+
 }
 
 .itenerary {
@@ -226,8 +234,6 @@ td {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-   
 }
 
 .functionsbtns{
@@ -247,18 +253,28 @@ td {
     font-weight: bold;
 }
 
-
-
-
-
 #squad{
-    background-color:#043d87a7 ;
+   background-color: rgba(104, 127, 173, 1); ;
     height: auto;
     display: flex;
     justify-items: center;
 }
 
+#callname{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    color: #FAFBFC;
+}
 
+.infofrombtn{
+    border: #65666a 2px solid;
+    background-color: rgba(104, 127, 173, 1);
+}
+.skier-info{
+    font-family: 'Thasadith', sans-serif;
+    color: #FAFBFC;
+    background-color: rgba(104, 127, 173, 1);
+}
 
 
 
@@ -303,6 +319,18 @@ td {
 #footer{
     background-color: rgba(15, 54, 114, 1);
     height: 15vh;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20pt;
+    
+}
+
+.contact{
+    margin-left: 8%;
+   margin-top:auto ;
+   margin-bottom:auto ;
 }
 
 
@@ -313,4 +341,15 @@ textarea{
 #radiobutton{
     display: flex;
     display: inline;
+}
+
+#underline{
+    margin-top: 2%;
+    text-decoration: underline;
+}
+.nav:hover{
+    /* color:#65666a;
+    background-color:#FFFFFF; */
+    transform: scale3d(1.1,1.1,1.1);
+    font-weight: bold;
 }

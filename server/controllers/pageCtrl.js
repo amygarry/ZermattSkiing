@@ -22,6 +22,10 @@ module.exports = {
         res.sendFile(path.join(__dirname, "../../Ashamy.JPG"))
     },
 
+    logopic:  (req, res) => {
+        res.sendFile(path.join(__dirname, "../../Ski Matterhorn-1 2.jpg"))
+    },
+
     scriptServer : (req,res)=>{
         res.sendFile(path.join(__dirname,"../../Zermatt.js" ))
     }
