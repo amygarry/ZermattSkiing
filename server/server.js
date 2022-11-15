@@ -14,12 +14,13 @@ const {scriptServer}= require("./controllers/pageCtrl.js")
 app.get("/js", scriptServer)
 
 //These are destructuring the funcions from the pageCtrl
-const {zermatthome, matterhornstyles, squadpic, weathermanpic } = require('./controllers/pageCtrl')
+const {zermatthome, matterhornstyles, squadpic, weathermanpic, ashamypic} = require('./controllers/pageCtrl')
 //these are functions so that the html and css are connected 
 app.get("/", zermatthome)
 app.get("/styles", matterhornstyles)
 app.get("/spic", squadpic)
 app.get("/weatherman", weathermanpic)
+app.get("/Ashamy", ashamypic)
 
 const{createSquadMember, getSquad, getAvgAge}= require('./controllers/dbcontroller.js')
 app.post("/addskier", createSquadMember)

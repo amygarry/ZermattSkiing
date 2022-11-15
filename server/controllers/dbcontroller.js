@@ -50,6 +50,9 @@ module.exports = {
         SELECT ability, count(*)
         from skisquad 
         group by ability; 
+
+        SELECT *  
+        FROM skisquad;
         
         `)
         .then(dbres=>{

@@ -39,7 +39,9 @@ function createMemberCard (skiers){
      <ul>
         <li>Name: ${skiers.name}</li>
         <li>Age: ${skiers.age}</li>
-        <li>instagram: ${skiers.instagram}</li>
+        <li>Instagram: ${skiers.instagram}</li>
+        <li>Mode: ${skiers.type}</li>
+        <li> Ability Leve:${skiers.ability}</li>
         </ul>`
         squadDiv.appendChild(skiCard) 
     }
@@ -47,11 +49,31 @@ function createMemberCard (skiers){
     function SquadStats (){
         axios.get('http://localhost:6721/ski/stats')
         .then(res=>{
+            
+            squadDiv.innerHTML=""
+
+            let total = res.data[4].count + res.data[4].count + res.data[4].count 
+            let expert = res.data[4].count * 3
+            let intermediate = res.data[5].count * 2
+            let beginner = res.data[6].count * 1
+
+            let averageCalculator = (expert + intermediate + beginner)/total
+            let averageAbility = "" 
+            if (averageCalculator <= 1){
+                averageAbility = "Beginner"
+            }else if (averageCalculator >1 && averageCalculator <=2){
+                averageAbility = "Intermediate"
+            }else if (averageCalculator>2){
+                averageAbility = "Expert"
+            }
+
             let squadStatsCard = document.createElement('div')
             squadStatsCard.innerHTML = `
-            <p>Average Age ${res.data[0].averageage}</p>
-            <p>Number of skiers ${res.data[2].count}</p>
-            <p>Number of snowboarders ${res.data[3].count}</p>
+            <p>Average Age ${Math.ceil(res.data[0].averageage/10)*10}</p>
+            <p>Skiers ${res.data[2].count}</p>
+            <p>Snowboarders ${res.data[3].count}</p>
+            <p>Average Ability ${averageAbility}</p>
+            
             `
             squadDiv.appendChild(squadStatsCard) 
         })
@@ -129,7 +151,10 @@ function createMemberCard (skiers){
                 
                 for (let i = 0; i < res.data.data[0].coordinates[0].dates.length; i++) {
                     let weatherdate = document.createElement('th')
-                    weatherdate.innerHTML= `${res.data.data[0].coordinates[0].dates[i].date.substring(5,10)}`
+                    if (i %2 === 0) {
+
+                        weatherdate.innerHTML= `${res.data.data[0].coordinates[0].dates[i].date.substring(5,10)}`
+                    }
                     let tempurature = document.createElement('td')
                     tempurature.innerHTML= `${res.data.data[0].coordinates[0].dates[i].value}`
                     weatherdates.appendChild(weatherdate)
@@ -141,12 +166,12 @@ function createMemberCard (skiers){
 
     }
 
-
+weather()
 
 joinSquadfrm.addEventListener('submit', addSkier)
 squadBtn.addEventListener('click', showSquad)
 squadStatsbtn.addEventListener('click',SquadStats)
-weathertestBtn.addEventListener('click', weather)
+
 
 // <li>Ability Level:${skiers.abilityLevel}</li>
 //<li>${skiers.bio}</li>
