@@ -103,7 +103,7 @@ function createMemberCard (skiers){
             type: type,
             enhancement: enhance.value,
             age: age.value,
-            pin:pin.value,
+            // pin: pin.value,
             ability: ability
         }
         console.log(body)
@@ -166,7 +166,7 @@ function createMemberCard (skiers){
 
     }
 
-weather()
+// weather()
 
 joinSquadfrm.addEventListener('submit', addSkier)
 squadBtn.addEventListener('click', showSquad)

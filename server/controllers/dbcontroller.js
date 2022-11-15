@@ -21,8 +21,8 @@ module.exports = {
     createSquadMember: (req, res)=>{
         let {name, instagram, callname, type, enhancement, age, pin, ability} = req.body
         sequelize.query(`
-        INSERT INTO skisquad (name, instagram, callname, type, age, enhancement, pin, ability)
-        VALUES ('${name}', '${instagram}', '${callname}', '${type}',${age},'${enhancement}', ${pin}, '${ability}')
+        INSERT INTO skisquad (name, instagram, callname, type, age, enhancement, ability)
+        VALUES ('${name}', '${instagram}', '${callname}', '${type}',${age},'${enhancement}', '${ability}')
         `)
         .then(dbres=>{
             res.send(`${name} was added to the squad`)

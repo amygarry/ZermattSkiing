@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;700&family=Noto+Sans+Mende+Kikakui&family=Quicksand:wght@300;400&family=Thasadith:wght@400;700&display=swap" rel="stylesheet">
+
     <title>Ski Matterhorn</title>
 </head>
 <body>
@@ -17,7 +19,7 @@
 
     <div id="navbar">
     
-        <a href="#jointhesquad" class="nav">Join the Squad</a>
+        <a href="#formbackground" class="nav">Join the Squad</a>
         <a href="" class="nav">FAQ</a>
         
     </div>
@@ -30,19 +32,19 @@
 
     <div class="backdropI">
         <div class="itenerary">
-            <h2>Itnerary</h2>
+            <h2 id="I">Itnerary</h2>
             <table id="week">
                 <thead>
                     <tr>
-                        <th>Wednedsay</th>
-                        <th>Thursday</th>
-                        <th>Friday</th>
-                        <th>Saturday</th>
-                        <th>Sunday</th>
-                        <th>Monday</th>
-                        <th>Tuesday</th>
-                        <th>Wednedsay</th>
-                        <th>Thursday</th>
+                        <th class="daysOftheWeek">Wednedsay</th>
+                        <th class="daysOftheWeek">Thursday</th>
+                        <th class="daysOftheWeek">Friday</th>
+                        <th class="daysOftheWeek">Saturday</th>
+                        <th class="daysOftheWeek">Sunday</th>
+                        <th class="daysOftheWeek">Monday</th>
+                        <th class="daysOftheWeek">Tuesday</th>
+                        <th class="daysOftheWeek">Wednedsay</th>
+                        <th class="daysOftheWeek">Thursday</th>
                     </tr>
                 </thead>
             <tbody>
@@ -140,14 +142,16 @@
     <img src="/Ashamy" alt="threegirlsskiing" width="600" height="750" >
     <div class="colums">
     <h2 class="headings">Who’s going?</h2>
-    Anyone interested in skiing the Swiss Alps
+    <p id="whoIsGoing">
+    Shredders of all kind. Skiers, snowboards, Eruopean enthusiasts, people who have never been to Eruope, powder chasers, ski connoissers, and pastry devourers of all ability levels. keep scrolling to get the full details on our current squad and then scroll a little more to join the fun. 
+    </p>
     </div>
 </div>
 
 
 <div class="backdrop">
-    <h2 class="btn"><button id = "theSquad">The Ski Squad</button></h2>
-    <h2 class="btn"><button id = "squadStats">Squad Stats</button></h2>
+    <h2 class="btn"><button class="functionsbtns" id ="theSquad">The Ski Squad</button></h2>
+    <h2 class="btn"><button class="functionsbtns" id ="squadStats">Squad Stats</button></h2>
 </div>
 
 
@@ -155,7 +159,7 @@
 </div>
 
 
-<div class="formbackground">
+<div id="formbackground">
     
     <form type="submit" id="jointhesquad">
         <h2>Join the Squad</h2>
