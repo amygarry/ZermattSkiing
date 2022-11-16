@@ -15,7 +15,7 @@ module.exports = {
     },
 
     weathermanpic:  (req, res) => {
-        res.sendFile(path.join(__dirname, "../../weatherman.JPG"))
+        res.sendFile(path.join(__dirname, "../../weatherman.jpg"))
     },
 
     ashamypic:  (req, res) => {
