@@ -82,6 +82,10 @@
 
 
 <div class="AproxCostBackground">
+
+    <!-- <video src="https://youtube.com/clip/UgkxlbrAtqIC_LzLTK0J0k9kxIsjA1bnLkbT
+    " autoplay loop ></video> -->
+
     <div class="cost">
         <h2>Aproximate Costs</h2>
          <p>
@@ -169,7 +173,6 @@
 
 
 <div id="formbackground">
-    
     <form type="submit" id="jointhesquad">
         <h2>Join the Squad</h2>
 
@@ -188,7 +191,7 @@
             <div class="info">
                 <label for="callname">Call Name</label>
                 <br>
-                <input id="callname" type="text" name="callname" placeholder="how do people know you on the slopes? e.g. Queen of Diamons">
+                <input id="callname" type="text" name="callname" placeholder="e.g. Queen of Diamonds">
             </div>
             
             <div class="info">
@@ -198,12 +201,12 @@
             </div>
 
             <div class="info">
-                <label for="allegiance">Ride Type</label>
+                <label id="ridetype" for="allegiance">Ride Type</label>
                 <br>
-                <div id="radiobutton">
+                <div class="radiobutton">
                     <input type="radio" name="allegiance" id="skier" value="skier"> 
                     <label for="skier">Skier</label> <br>
-                    <input type="radio" name="allegiance" id="snowboarder" value="snowboarder"> <br>
+                    <input type="radio" name="allegiance" id="snowboarder" value="snowboarder">
                     <label for="snowboarder"> Snowboarder</label>
                 </div>
             </div>
@@ -211,20 +214,20 @@
             <div class="info">
                 <label for="ability">Ski Level</label>
                 <br>
-                <div id="radiobutton">
-                    <input type="radio" name="abilitiy" id="expert"> 
+                <div class="radiobutton">
+                    <input type="radio" name="ability" id="expert"> 
                     <label for="expert">Expert</label> <br>
-                    <input type="radio" name="ability" id="intermediate"> <br>
-                    <label for="intermediate">Intermediate</label>
-                    <input type="radio" name="ability" id="beginner"> <br>
+                    <input type="radio" name="ability" id="intermediate">
+                    <label for="intermediate">Intermediate</label> <br>
+                    <input type="radio" name="ability" id="beginner">
                     <label for="beginner">Beginner</label>
                 </div>
             </div>
     
             <div class="info">
-                <label for="enhance">How will you enhance the trip</label>
+                <label for="enhance">How will you enhance the trip?</label>
                 <br>
-                <textarea id="enhance" name="enhance" placeholder="tell us how cool your are" cols="30" rows="10"></textarea>
+                <textarea id="enhance" name="enhance" placeholder="e.g. Will bring snacks" cols="30" rows="10"></textarea>
             </div>
 
             <!-- <div class="info">
@@ -233,7 +236,7 @@
                 <p>So you can edit your information</p>
             </div> -->
 
-            <button type="submit">Submit</button>
+            <button type="submit" class="info" id="submitbtn">Submit</button>
     </form>
 </div>
 

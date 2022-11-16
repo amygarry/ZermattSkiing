@@ -20,7 +20,8 @@ const weatherTable = document.getElementById('weatherWeek')
 const weatherdates = document.getElementById('tr')
 const temp = document.getElementById('temp')
 
-function showSquad (){
+
+function showSquad (){  
 axios
 .get('http://localhost:6721/ski/inventory')
 .then((res)=>{
@@ -30,6 +31,7 @@ axios
     createMemberCard(res.data[i]) 
     }
 })
+// document.querySelector(".flexy").style.height ="auto"
 }
 
 function createMemberCard (skiers){
@@ -72,11 +74,12 @@ function createMemberCard (skiers){
 
             let squadStatsCard = document.createElement('div')
             squadStatsCard.innerHTML = `
-            <p>Average Age ${Math.ceil(res.data[0].averageage/10)*10}</p>
-            <p>Skiers ${res.data[2].count}</p>
-            <p>Snowboarders ${res.data[3].count}</p>
-            <p>Average Ability ${averageAbility}</p>
-            
+            <div class="infofrombtn stats">
+                <p>Average Age: ${Math.ceil(res.data[0].averageage/10)*10}</p>
+                <p>Skiers: ${res.data[2].count}</p>
+                <p>Snowboarders: ${res.data[3].count}</p>
+                <p>Average Ability: ${averageAbility}</p>
+            </div>
             `
             squadDiv.appendChild(squadStatsCard) 
         })
@@ -169,7 +172,7 @@ function createMemberCard (skiers){
 
     }
 
-// weather()
+weather()
 
 joinSquadfrm.addEventListener('submit', addSkier)
 squadBtn.addEventListener('click', showSquad)

@@ -139,6 +139,7 @@ font-family: 'Cormorant Garamond', serif;
     height: auto;
     display: flex;
     justify-items: center;
+    z-index: 2;
 }
 
 .cost {
@@ -244,7 +245,7 @@ td {
     font-family: 'Thasadith', sans-serif;
     border: white 3px solid;
     transition: 0.3s;
-    /* border: none; */
+
 }
 .functionsbtns:hover{
     color:#65666a;
@@ -297,7 +298,19 @@ td {
     height: 250px;
     width: 200px;
     border-radius:4px;
-    /* box-shadow: 4px 3px 3px black; */  
+}
+
+.stats{
+    font-family: 'Thasadith', sans-serif;
+    color:  #65666a;
+    background-color: white;
+    font-size: 20pt;
+    font-weight: bold;
+    height: max-content;
+    width: max-content;
+    padding: 30px;
+    text-align: center;
+    /* box-shadow: 8px 5px 5px darkgray; */
 }
 
 ul{
@@ -313,19 +326,6 @@ ul{
 }
 
 
-
-/* #squad {
-
-    text-align: left;
-    margin-left:  7%;
-    margin-right: 7%;
-    padding: 1.5%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: larger;
-    
-} */
-
-
  form {
     background-size: 100%;
     text-align: center;
@@ -334,9 +334,10 @@ ul{
     margin-right: 35%;
     margin-top: 0%;
     padding: 1.5%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Thasadith', sans-serif;
     font-size: larger;
-    background-color: rgba(128, 128, 128, 0.646);
+    background-color:rgba(218, 225, 235, 0.71);
+    /* background-color: rgba(128, 128, 128, 0.793); */
     padding: 3%;
     width: 30vw;
 }
@@ -348,9 +349,51 @@ ul{
     background-attachment:fixed;
     background-size: 100%;
     justify-content: center;
-
-
 }
+
+#enhance{
+    width: 250px;
+    background-color: rgb(228, 233, 241);
+}
+
+.info{
+    font-size: 20pt;
+    text-align: left;
+    margin-left:auto;
+    margin-right: auto;
+    width: 300px;
+    font-family: 'Thasadith', sans-serif;
+    font-weight: bold;
+}
+
+input{
+    background-color: rgb(228, 233, 241);
+    height: 35px;
+    width: 250px;
+    
+}
+
+
+
+input[type=radio]{
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    accent-color: gray;
+}
+.radiobutton{
+    font-size: 17pt;
+    margin: 5%;
+    width: max-content;
+}
+#ridetype{
+    margin-top: 20%;
+}
+
+#age{
+    margin-bottom: 3%;
+}
+
 
 #footer{
     background-color: rgba(15, 54, 114, 1);
@@ -386,6 +429,26 @@ textarea{
 .nav:hover{
     /* color:#65666a;
     background-color:#FFFFFF; */
+    transform: scale3d(1.1,1.1,1.1);
+    font-weight: bold;
+}
+
+#submitbtn{
+    margin-top: 15px;
+    background-color: #c5c5c8;
+    color: black;
+    padding: 10px;
+    font-size: 20pt;
+    font-family: 'Thasadith', sans-serif;
+    border: black 1px solid;
+    transition: 0.3s;
+    text-align: center;
+    width: auto;
+
+}
+#submitbtn:hover{
+    color:#65666a;
+    background-color:#FFFFFF;
     transform: scale3d(1.1,1.1,1.1);
     font-weight: bold;
 }
