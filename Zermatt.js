@@ -18,7 +18,8 @@ const weathertestBtn = document.getElementById('weather')
 const weatherDiv = document.getElementById('weatherdiv')
 const weatherTable = document.getElementById('weatherWeek')
 const weatherdates = document.getElementById('tr')
-const temp = document.getElementById('temp')
+const highs = document.getElementById('highs')
+const lows = document.getElementById('lows')
 
 
 function showSquad (){  
@@ -143,28 +144,39 @@ function createMemberCard (skiers){
      
         function getapiData (token){
             let today = new Date().toISOString()
+            let todayAtThreeAm = today.slice(0,11)+ "15:00:00.000Z"
             const nextWeek = new Date()
             nextWeek.setDate(new Date().getDate() + 7)
             let nextWeekSring = nextWeek.toISOString()
-            console.log(nextWeekSring)
-            console.log(today)
+          
             
-            let url = today +"--" + nextWeekSring + ":PT12H/t_2m:F/46.0212076,7.749254/json?access_token=" + token
+            let url = todayAtThreeAm +"--" + nextWeekSring + ":PT12H/t_2m:F/46.0212076,7.749254/json?access_token=" + token
     
+            console.log(url)
+
             axios.get('https://api.meteomatics.com/'+url)
             .then(res =>{
                 console.log(res.data.data[0].coordinates[0].dates[0].date.substring(5,10))
                 
                 for (let i = 0; i < res.data.data[0].coordinates[0].dates.length; i++) {
                     let weatherdate = document.createElement('th')
+                    let lowTemp = document.createElement('td')
+                    let highTemp = document.createElement('td')
                     if (i %2 === 0) {
 
                         weatherdate.innerHTML= `${res.data.data[0].coordinates[0].dates[i].date.substring(5,10)}`
+                        
+                        highTemp.innerHTML= `${res.data.data[0].coordinates[0].dates[i].value}`
+
+                        highs.appendChild(highTemp)
+                        weatherdates.appendChild(weatherdate)
+                    }else{
+
+                        lowTemp.innerHTML= `${res.data.data[0].coordinates[0].dates[i].value}`
+                        lows.appendChild(lowTemp)
                     }
-                    let tempurature = document.createElement('td')
-                    tempurature.innerHTML= `${res.data.data[0].coordinates[0].dates[i].value}`
-                    weatherdates.appendChild(weatherdate)
-                    temp.appendChild(tempurature)
+
+                  
                 }
             })
         }

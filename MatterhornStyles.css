@@ -178,15 +178,18 @@ th {
     font-family: 'Roboto Slab', serif;
     font-weight: bolder;
     color: #65666a;
-    font-weight: lighter;
-    
+    font-weight: lighter;  
 }
 
 td {
     border-right:1px solid rgb(80, 78, 78);
-     /* text-align: left; */
+     text-align: center;
 }
 
+.temps{
+    font-family: 'Thasadith', sans-serif;
+    font-weight: bold;
+}
 
 .noboarder{
     border-right: none;
@@ -195,9 +198,11 @@ td {
 
 .sections{
     display: flex;
-    height: 750px;
-    
-    
+    height: 750px; 
+}
+
+#weatherWeek{
+    font-size: 20px;
 }
 
 .colums{
@@ -262,12 +267,6 @@ td {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
-}
-
-#autoheight{
-    height: max-content;
-    background-color: #1b5493; ;
 }
 
 #squad{
@@ -276,7 +275,7 @@ td {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
+    max-height: 50vh;
     margin-left: 2%;
     align-items: center;
 }
