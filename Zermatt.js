@@ -37,7 +37,7 @@ function createMemberCard (skiers){
    let skiCard = document.createElement('div')
    skiCard.innerHTML = `
     <div class="infofrombtn">
-        <h4 id ="callname">${skiers.callname}</h4>
+        <h4 id ="callnames">${skiers.callname}</h4>
             <ul class ="skier-info">
                 <li>Name: ${skiers.name}</li>
                 <li>Age: ${skiers.age}</li>

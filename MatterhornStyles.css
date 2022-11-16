@@ -65,9 +65,9 @@ h1 {
 
 .backdrop {
     background-color:#1b5493;
-    height: 40vh;
+    height: 50vh;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     
 }
@@ -87,7 +87,7 @@ h1 {
     padding: 1.5%;
     font-family: 'Thasadith', sans-serif;
 
-    font-size: xx-large;
+    font-size: 30pt;
  
     color: white;
     background-color:#1b5493;
@@ -253,27 +253,63 @@ td {
     font-weight: bold;
 }
 
-#squad{
-   background-color: rgba(104, 127, 173, 1); ;
-    height: auto;
-    display: flex;
-    justify-items: center;
+.headerbuttons{
+    margin-left: 2%;
 }
 
-#callname{
+.flexy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+#autoheight{
+    height: max-content;
+    background-color: #1b5493; ;
+}
+
+#squad{
+   background-color: #1b5493; ;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-left: 2%;
+    align-items: center;
+}
+
+#callnames{
     font-family: 'Cormorant Garamond', serif;
     font-weight: bold;
-    color: #FAFBFC;
+    color:  #65666a;
+    font-size: 17pt;
+    text-align: center;
+    margin-bottom: 3%;
 }
 
 .infofrombtn{
     border: #65666a 2px solid;
-    background-color: rgba(104, 127, 173, 1);
+    background-color: rgb(255, 255, 255);
+    margin: 2%;
+    padding: 15px;
+    height: 250px;
+    width: 200px;
+    border-radius:4px;
+    /* box-shadow: 4px 3px 3px black; */  
+}
+
+ul{
+    list-style-type:none;
+    padding-left: 20%;
 }
 .skier-info{
     font-family: 'Thasadith', sans-serif;
-    color: #FAFBFC;
-    background-color: rgba(104, 127, 173, 1);
+    color:  #65666a;
+    background-color: white;
+    font-size: 14pt;
+    /* text-align: center; */
 }
 
 
