@@ -345,7 +345,7 @@ ul{
     display: flex;
     align-items: center;
     background-image: url("/spic");
-    height: 110vh;
+    height: 150vh;
     background-attachment:fixed;
     background-size: 100%;
     justify-content: center;
