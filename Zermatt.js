@@ -123,6 +123,18 @@ function createMemberCard (skiers){
 
     function weather (){
         console.log('got to weatherfunction')
+
+        axios.get('/weather')
+        .then(res => {
+            console.log('full weather route connected')
+        })
+        .catch(err => {
+            console.log('error happened:')
+            console.log(err)
+        })
+
+        return
+
 //this next part gets the token 
         username='devmountain_garry'
         password='2z9uWnaT8F'
