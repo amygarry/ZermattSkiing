@@ -61,12 +61,3 @@ module.exports = {
     }
 
 }
-
-
-// CREATE TABLE skisquad (
-//     skier_id SERIAL PRIMARY KEY, 
-//     name VARCHAR, 
-//     instagram VARCHAR,
-//     bio VARCHAR,
-//     enhancement VARCHAR
-//     );

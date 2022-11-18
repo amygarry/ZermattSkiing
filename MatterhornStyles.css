@@ -1,5 +1,4 @@
 
-
 @keyframes slideUp {
     from{
         transform: translateY(100%);
@@ -10,9 +9,9 @@
 }
 
 body{
-    margin:0%;
-    
+    margin:0%;   
 }
+
 h1 { 
     height: 400px;
     width: 100%;
@@ -25,12 +24,7 @@ h1 {
     text-align:center;
     margin-top: 0%;
     margin-bottom: 0%;
-   
-    background-color: rgba(15, 54, 114, 1);
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    
+    background-color: rgba(15, 54, 114, 1); 
 }
 
 #navbar {
@@ -44,9 +38,11 @@ h1 {
     top: 0px;
     flex-direction: row;
 }
+
 .nav-wrapper{
     display: flex;
 }
+
 .nav{
     margin: 2%;
     color: white;
@@ -56,43 +52,37 @@ h1 {
     text-align: center;
     width: 250px;
 }
+
 #faq{
     width: auto;
     margin-right: 8%;
 }
 
-
+#logo{
+    width: 250px;
+    height: 110px ;
+}
 
 .backdrop {
     background-color:#1b5493;
-    height: 50vh;
+    height: 55vh;
     display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
-    
+    justify-content: center;  
 }
 
 .description {
     display: flex;
     text-align: center;
-    /* height: 150px; */
     align-items: center; 
     justify-content: center;
     justify-items: center;
-    /* border: solid #86868e 2px;
-    border-radius: 3px;
-    box-shadow:5px 5px 3px #c9cace; */
     margin-left: 10%;
     margin-right: 10%;
     padding: 1.5%;
     font-family: 'Thasadith', sans-serif;
-
     font-size: 30pt;
- 
     color: white;
     background-color:#1b5493;
-    /* margin-top: 5%;
-    margin-bottom: 5%; */
 }
 
 .backdropI{
@@ -109,15 +99,12 @@ margin-right: 5%;
 margin-top: 3%;
 margin-bottom: 3%;
 font-family: 'Cormorant Garamond', serif;
-
-
 }
+
 #week {
     background-color: #FAFBFC;
     font-family: 'Thasadith', sans-serif;
     font-size: larger;
-   
-    /* box-shadow:5px 5px 3px #65666a; */
 }
  
 #I{
@@ -126,13 +113,13 @@ font-family: 'Cormorant Garamond', serif;
     color: rgb(30, 29, 29);
     font-size: 20pt;
 }
+
 .daysOftheWeek{
     font-family: 'Cormorant Garamond', serif;
     font-weight: bold;
     color: rgb(64, 62, 62);
     font-size: x-large;
 }
-
 
 .AproxCostBackground{
     background-color:#043d87a7 ;
@@ -154,10 +141,7 @@ font-family: 'Cormorant Garamond', serif;
     font-size: larger;
     background-color: #FAFBFC;
     box-shadow:5px 5px 3px #65666a;
-    /* font-family: 'Thasadith', sans-serif;
-    font-weight: bold; */
 }
-
 
 table {
     table-layout: fixed;
@@ -167,13 +151,11 @@ table {
     border: none;
 }
  
-  th, td {
+th, td {
   padding: 10px;
-  /* text-align: left; */
 }
 
 th {
-    /* text-decoration: underline; */
     font-family: 'Cinzel', serif;
     font-family: 'Roboto Slab', serif;
     font-weight: bolder;
@@ -195,11 +177,15 @@ td {
     border-right: none;
 }
 
-
 .sections{
     display: flex;
-    height: 750px; 
+    height: auto;
 }
+
+#pics{
+    width: 700px;
+    height: 750px; 
+} 
 
 #weatherWeek{
     font-size: 20px;
@@ -211,30 +197,26 @@ td {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: auto;
+    width: auto; 
    
 }
  
 .headings{
-    /* width: 70%;
-    height: 10%; */
     display: flex;
     font-family: 'Cormorant Garamond', serif;
     font-weight: 700;
     font-size:50pt;
     justify-content: center;
     align-items: center;
-
 }
+
 #whoIsGoing{
     font-family: 'Thasadith', sans-serif;
     font-size: 28pt;
-    
     margin: 7%;
     color: #65666a;
     text-align: center;
 }
-
 
 .btn{
     display: flex;
@@ -250,8 +232,8 @@ td {
     font-family: 'Thasadith', sans-serif;
     border: white 3px solid;
     transition: 0.3s;
-
 }
+
 .functionsbtns:hover{
     color:#65666a;
     background-color:#FFFFFF;
@@ -309,21 +291,19 @@ td {
     width: max-content;
     padding: 30px;
     text-align: center;
-    /* box-shadow: 8px 5px 5px darkgray; */
 }
 
 ul{
     list-style-type:none;
     padding-left: 20%;
 }
+
 .skier-info{
     font-family: 'Thasadith', sans-serif;
     color:  #65666a;
     background-color: white;
     font-size: 14pt;
-    /* text-align: center; */
 }
-
 
  form {
     background-size: 100%;
@@ -336,10 +316,10 @@ ul{
     font-family: 'Thasadith', sans-serif;
     font-size: larger;
     background-color:rgba(218, 225, 235, 0.71);
-    /* background-color: rgba(128, 128, 128, 0.793); */
     padding: 3%;
     width: 30vw;
 }
+
 #formbackground{
     display: flex;
     align-items: center;
@@ -369,10 +349,7 @@ input{
     background-color: rgb(228, 233, 241);
     height: 35px;
     width: 250px;
-    
 }
-
-
 
 input[type=radio]{
     width: 20px;
@@ -393,7 +370,6 @@ input[type=radio]{
     margin-bottom: 3%;
 }
 
-
 #footer{
     background-color: rgba(15, 54, 114, 1);
     height: 15vh;
@@ -401,8 +377,7 @@ input[type=radio]{
     display: flex;
     flex-direction: column;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 20pt;
-    
+    font-size: 20pt;   
 }
 
 .contact{
@@ -410,7 +385,6 @@ input[type=radio]{
    margin-top:auto ;
    margin-bottom:auto ;
 }
-
 
 textarea{
     background-color: #c5c5c8;
@@ -426,8 +400,6 @@ textarea{
     text-decoration: underline;
 }
 .nav:hover{
-    /* color:#65666a;
-    background-color:#FFFFFF; */
     transform: scale3d(1.1,1.1,1.1);
     font-weight: bold;
 }
@@ -451,3 +423,224 @@ textarea{
     transform: scale3d(1.1,1.1,1.1);
     font-weight: bold;
 }
+
+@media (max-width: 500px) {
+    h1 { 
+        height: 10vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
+        background-image: url(https://www.zermatt.ch/extension/portal-zermatt/var/storage/images/media/bibliothek/berge/matterhorn/sicht-aufs-matterhorn-vom-gornergrat/58955-3-ger-DE/Sicht-aufs-Matterhorn-vom-Gornergrat_grid_624x350.jpg);
+        font-size: 10vw ;   
+        color: azure;
+        text-align:center;
+        margin-top: 0%;
+        margin-bottom: 0%;
+        background-color: rgba(15, 54, 114, 1); 
+    }
+
+    body{
+        margin:0%;   
+    }
+
+    #navbar {
+        background-color: rgba(15, 54, 114, 1);
+        height: 10vh;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0px;
+        flex-direction: row;
+    }
+    
+    .nav-wrapper{
+        display: flex;
+    }
+    
+    .nav{
+        margin: 2%;
+        color: white;
+        font-size:small; 
+        font-family: 'Cormorant Garamond', serif;
+        transform: .5s;
+        text-align: center;
+        width: 250px;
+    }
+
+    #logo{
+        width: 30vw;
+        height: 10vh;
+    }
+
+    .backdrop {
+        background-color:#1b5493;
+        height: 27vh;
+        display: flex;
+        justify-content: center;  
+    }
+
+    .description {
+        display: flex;
+        text-align: center;
+        align-items: center; 
+        justify-content: center;
+        justify-items: center;
+        margin-left: 8%;
+        margin-right: 8%;
+        padding: 1.5%;
+        font-family: 'Thasadith', sans-serif;
+        font-size: small;
+        color: white;
+        background-color:#1b5493;
+    }
+
+    .cost {
+        text-align: center;
+        border: solid;
+        margin-left:  5%;
+        margin-right: 5%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding: 1.5%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: larger;
+        background-color: #FAFBFC;
+        box-shadow:5px 5px 3px #65666a;
+    }
+
+    .sections{
+        display: flex;
+        flex-direction: column;
+        height: 100vh; 
+    }
+    
+    #weatherWeek{
+        font-size: 20px;
+    }
+   
+    #pics{
+        width: 100vw;
+        height: 70vh; 
+    } 
+
+    .colums{
+        display: flex;
+        justify-items: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto; 
+    }
+     
+    .headings{
+        display: flex;
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 700;
+        font-size:larger;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #whoIsGoing{
+        font-family: 'Thasadith', sans-serif;
+        font-size: small;
+        margin: 3%;
+        color: #65666a;
+        text-align: center;
+    }
+
+    .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .functionsbtns{
+        background-color: #1b5493;
+        color: #FAFBFC;
+        padding: 10px;
+        font-size: medium;
+        font-family: 'Thasadith', sans-serif;
+        border: white 3px solid;
+        transition: 0.3s;
+    }
+    
+    .functionsbtns:hover{
+        color:#65666a;
+        background-color:#FFFFFF;
+        transform: scale3d(1.3,1.3,1.3);
+        font-weight: bold;
+    }
+    
+    .headerbuttons{
+     margin: 0%;
+    }
+    
+    .flexy{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+    }
+
+
+    #squad{
+        background-color: #1b5493; ;
+         height: auto;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         max-height: 50vh;
+         align-items: center;
+     }
+     
+     #callnames{
+         font-family: 'Cormorant Garamond', serif;
+         font-size: smaller;
+         font-weight: bold;
+         color:  #65666a;
+         text-align: center;
+         margin-bottom: 3%;
+     }
+     
+     .infofrombtn{
+         border: #65666a 2px solid;
+         background-color: rgb(255, 255, 255);
+         padding: 1%;
+         height: max-content;
+         width: max-content;
+         border-radius:4px;
+         font-size: smaller;
+     }
+     
+     .stats{
+         font-family: 'Thasadith', sans-serif;
+         color:  #65666a;
+         background-color: white;
+         font-size: smaller;
+         font-weight: bold;
+         height: max-content;
+         width: max-content;
+         padding: 10%;
+         text-align: center;
+         margin: 0%;
+     }
+     
+     ul{
+         list-style-type:none;
+         padding-left: 20%;
+     }
+     
+     .skier-info{
+         font-family: 'Thasadith', sans-serif;
+         color:  #65666a;
+         background-color: white;
+         font-size: smaller;
+     }
+
+  
+  }
