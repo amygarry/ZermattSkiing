@@ -30,6 +30,8 @@ app.post("/addskier", createSquadMember)
 app.get('/ski/inventory', getSquad)
 app.get('/ski/stats', getAvgAge)
 
+const {getWeather}= require('./controllers/apicontroller.js')
+app.get('/weather', getWeather)
 
 
 const {PORT} = process.env

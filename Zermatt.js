@@ -123,65 +123,33 @@ function createMemberCard (skiers){
 
     function weather (){
         console.log('got to weatherfunction')
-//this next part gets the token 
-        username='devmountain_garry'
-        password='2z9uWnaT8F'
-        let headers = new Headers();
-        headers.set('Authorization', 'Basic ' + btoa(username + ":" + password));
 
+        axios.get('/weather')
+        .then(res => {
+            let temperatureTimeList = res.data
 
-        fetch('https://login.meteomatics.com/api/v1/token', {
-            method: 'GET', headers: headers
-        }).then(function (resp) {
-             return resp.json();
-        }).then(function (data) {
-            let token = data.access_token;
-            console.log('token', token);
-            getapiData(token)
-        }).catch(function (err) {
-            console.log('something went wrong', err);
-        });
-     
-        function getapiData (token){
-            let today = new Date().toISOString()
-            let todayAtThreeAm = today.slice(0,11)+ "15:00:00.000Z"
-            const nextWeek = new Date()
-            nextWeek.setDate(new Date().getDate() + 7)
-            let nextWeekSring = nextWeek.toISOString()
-          
-            
-            let url = todayAtThreeAm +"--" + nextWeekSring + ":PT12H/t_2m:F/46.0212076,7.749254/json?access_token=" + token
-    
-            console.log(url)
+            for (let i = 0; i < temperatureTimeList.length; i++) {
+                let weatherdate = document.createElement('th')
+                let lowTemp = document.createElement('td')
+                let highTemp = document.createElement('td')
+                if (i %2 === 0) {
 
-            axios.get('https://api.meteomatics.com/'+url)
-            .then(res =>{
-                console.log(res.data.data[0].coordinates[0].dates[0].date.substring(5,10))
-                
-                for (let i = 0; i < res.data.data[0].coordinates[0].dates.length; i++) {
-                    let weatherdate = document.createElement('th')
-                    let lowTemp = document.createElement('td')
-                    let highTemp = document.createElement('td')
-                    if (i %2 === 0) {
+                    weatherdate.innerHTML= `${temperatureTimeList[i].date.substring(5,10)}`
 
-                        weatherdate.innerHTML= `${res.data.data[0].coordinates[0].dates[i].date.substring(5,10)}`
-                        
-                        highTemp.innerHTML= `${res.data.data[0].coordinates[0].dates[i].value}`
+                    highTemp.innerHTML= `${temperatureTimeList[i].value}`
 
-                        highs.appendChild(highTemp)
-                        weatherdates.appendChild(weatherdate)
-                    }else{
-
-                        lowTemp.innerHTML= `${res.data.data[0].coordinates[0].dates[i].value}`
-                        lows.appendChild(lowTemp)
-                    }
-
-                  
+                    highs.appendChild(highTemp)
+                    weatherdates.appendChild(weatherdate)
+                }else {
+                    lowTemp.innerHTML= `${temperatureTimeList[i].value}`
+                    lows.appendChild(lowTemp)
                 }
-            })
-        }
- 
-
+            }
+        })
+        .catch(err => {
+            console.log('error happened:')
+            console.log(err)
+        })
     }
 
 weather()
