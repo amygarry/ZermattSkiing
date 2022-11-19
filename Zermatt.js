@@ -159,9 +159,6 @@ squadBtn.addEventListener('click', showSquad)
 squadStatsbtn.addEventListener('click',SquadStats)
 
 
-// <li>Ability Level:${skiers.abilityLevel}</li>
-//<li>${skiers.bio}</li>
-
 
 
 
