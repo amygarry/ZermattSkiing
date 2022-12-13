@@ -24,7 +24,7 @@ const lows = document.getElementById('lows')
 
 function showSquad (){  
 axios
-.get('http://localhost:6721/ski/inventory')
+.get('/ski/inventory')
 .then((res)=>{
     console.log(res.data)
     squadDiv.innerHTML=""
@@ -53,7 +53,7 @@ function createMemberCard (skiers){
     }
 
     function SquadStats (){
-        axios.get('http://localhost:6721/ski/stats')
+        axios.get('/ski/stats')
         .then(res=>{
             
             squadDiv.innerHTML=""
