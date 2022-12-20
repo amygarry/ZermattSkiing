@@ -58,27 +58,37 @@ function createMemberCard (skiers){
             
             squadDiv.innerHTML=""
 
-            let total = res.data[4].count + res.data[4].count + res.data[4].count 
-            let expert = res.data[4].count * 3
-            let intermediate = res.data[5].count * 2
-            let beginner = res.data[6].count * 1
+            // let total = res.data[3].count + res.data[4].count
+            let expert = res.data[4].count
+            let intermediate = res.data[3].count
+           
+            // let beginner = res.data[6].count * 1
 
-            let averageCalculator = (expert + intermediate + beginner)/total
-            let averageAbility = "" 
-            if (averageCalculator <= 1){
-                averageAbility = "Beginner"
-            }else if (averageCalculator >1 && averageCalculator <=2){
-                averageAbility = "Intermediate"
-            }else if (averageCalculator>2){
-                averageAbility = "Expert"
-            }
+            // let averageCalculator = (expert + intermediate)/total
+            let averageAbility = "cool" 
+            // if (averageCalculator <= 1){
+            //     averageAbility = "Beginner"
+            // }else if (averageCalculator >1 && averageCalculator <=2){
+            //     averageAbility = "Intermediate"
+            // }else if (averageCalculator>2){
+            //     averageAbility = "Expert"
+            // }
+            // console.log(expert)
+            // console.log(intermediate)
+            // console.log(averageAbility)
+
+            if (expert>intermediate){
+                averageAbility= "Expert"
+            }else{averageAbility= "Intermediate"
+        }else{averageAbility="Expermediate"}
+            
 
             let squadStatsCard = document.createElement('div')
             squadStatsCard.innerHTML = `
             <div class="infofrombtn stats">
-                <p>Average Age: ${Math.ceil(res.data[0].averageage/10)*10}</p>
-                <p>Skiers: ${res.data[2].count}</p>
-                <p>Snowboarders: ${res.data[3].count}</p>
+                <p>Average Age: ${Math.round(res.data[0].averageage*10)/10}</p>
+                <p>Skiers: ${res.data[1].count}</p>
+                <p>Snowboarders: ${res.data[2].count}</p>
                 <p>Average Ability: ${averageAbility}</p>
             </div>
             `

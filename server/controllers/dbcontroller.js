@@ -56,6 +56,7 @@ module.exports = {
         
         `)
         .then(dbres=>{
+            // console.log(dbres[0])
             res.send(dbres[0])
         })
     }
