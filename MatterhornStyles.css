@@ -45,22 +45,31 @@ h1 {
 
 .nav{
     margin: 2%;
-    color: white;
+    color: rgba(15, 54, 114, 1);
+    background-color: rgb(215, 230, 245);
+    border-radius: 16px;
     font-size:xx-large; 
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Thasadith', sans-serif;
     transform: .5s;
     text-align: center;
-    width: 250px;
+    width: 300px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-decoration: none;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 
 #faq{
     width: auto;
     margin-right: 8%;
+    padding: 3%;
 }
 
 #logo{
     width: 250px;
     height: 110px ;
+    margin-left: 2%;
 }
 
 .backdrop {
@@ -377,7 +386,7 @@ input[type=radio]{
 
 #footer{
     background-color: rgba(15, 54, 114, 1);
-    height: 15vh;
+    height: 20vh;
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
