@@ -79,7 +79,7 @@ function createMemberCard (skiers){
 
             if (expert>intermediate){
                 averageAbility= "Expert"
-            }else{averageAbility= "Intermediate"
+            }else if{averageAbility= "Intermediate"
         }else{averageAbility="Expermediate"}
             
 
