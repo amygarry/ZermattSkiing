@@ -818,4 +818,21 @@ input[type=radio]{
     font-family: 'Cormorant Garamond', serif;
     font-size: medium;   
 }
+
+.nav{
+    margin: 2%;
+    color: rgba(15, 54, 114, 1);
+    background-color: rgb(215, 230, 245);
+    border-radius: 16px;
+    font-size:small; 
+    font-family: 'Thasadith', sans-serif;
+    transform: .5s;
+    text-align: center;
+    width: 150px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-decoration: none;
+    padding-left: 7px;
+    padding-right: 7px;
+}
   }
